@@ -1,4 +1,3 @@
-// These are the global variables.
 const router = require('express').Router();
 const fs = require('fs');
 const ut = require("util");
@@ -56,7 +55,7 @@ const readAppend = (content, file) => {
             parsedData.push(content);
             fileWrite(file, parsedData);
         }
-    });
+    })};
 
 const fileWrite = (destination, content) =>
     fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
